@@ -1,0 +1,15 @@
+{
+  "name": "ember-user",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Sideload user",
+  "dependencies": {
+    "kelonye/ember": "*"
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}

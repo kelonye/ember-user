@@ -1,0 +1,38 @@
+!!!5
+html(lang="en")
+  head
+    
+    meta(charset="utf-8")
+    
+    title validate
+
+    link(rel="stylesheet", href="../../node_modules/mocha/mocha.css")
+    link(rel="stylesheet", href="../../build/build.css")
+
+  body
+
+    #mocha
+
+    script(src="../../build/build.js")
+    
+    :coffeescript
+
+      require "kelonye-ember"
+      require('ember-user')()
+      window.assert = require "component-assert"
+
+    script(src="../../node_modules/mocha/mocha.js")
+
+    :coffeescript
+      mocha.setup 'bdd'
+      mocha.setup
+        globals: ['hasCert']
+
+    script(src="../index.js")
+
+    :coffeescript
+
+      if window.mochaPhantomJS
+        mochaPhantomJS.run()
+      else
+        mocha.run()

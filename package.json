@@ -1,0 +1,14 @@
+{
+  "name": "ember-user",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "coffee-script": "*",
+    "mocha-phantomjs": "*",
+    "component": "*",
+    "jade": "*",
+    "mocha": "*"
+  },
+  "script": "npm install && component install && make test"
+}
