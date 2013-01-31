@@ -4,8 +4,8 @@ HTML = $(JADE:.jade=.html)
 COFFEE = test/index.coffee index.coffee
 JS = $(COFFEE:.coffee=.js)
 
-test: build
-	@mocha-phantomjs -R dot test/support/index.html
+# test: build
+# 	@mocha-phantomjs -R dot test/support/index.html
 
 build: $(HTML) $(JS)
 	@component build --dev
