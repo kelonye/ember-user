@@ -8,7 +8,7 @@ JS = $(COFFEE:.coffee=.js)
 # 	@mocha-phantomjs -R dot test/support/index.html
 
 build: $(HTML) $(JS)
-	@component build --dev
+#	@component build --dev
 
 %.html: %.jade
 	jade < $< --path $< > $@

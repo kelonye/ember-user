@@ -1,6 +1,4 @@
 
-Inject controllers and routes with current user object.
-
 Install
 ---
 
