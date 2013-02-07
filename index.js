@@ -9,11 +9,10 @@ module.exports = function(url) {
   if (url == null) {
     url = '/users/me';
   }
-  return Em.Application.initializer({
+  Em.Application.initializer({
     name: "user",
     initialize: function(container, App) {
-      var UserController;
-      UserController = Em.ObjectController.extend({
+      App.UserController = Em.ObjectController.extend({
         init: function() {
           var that;
           that = this;
@@ -31,8 +30,13 @@ module.exports = function(url) {
           });
         }
       });
-      container.register('user', 'main', UserController);
-      container.lookup('user:main');
+      container.register('user', 'main', App.UserController);
+      return container.lookup('user:main');
+    }
+  });
+  return Em.Application.initializer({
+    name: "injectUser",
+    initialize: function(container, App) {
       container.typeInjection('controller', 'user', 'user:main');
       return container.typeInjection('route', 'user', 'user:main');
     }

@@ -11,7 +11,7 @@ module.exports = (url)->
 
     initialize: (container, App) ->
 
-      UserController = Em.ObjectController.extend
+      App.UserController = Em.ObjectController.extend
         init: ->
           # sideload user
           that = @
@@ -24,7 +24,14 @@ module.exports = (url)->
                 user = App.User.find key
                 set that, 'content', user
 
-      container.register 'user', 'main', UserController
+      container.register 'user', 'main', App.UserController
       container.lookup 'user:main'
+
+
+  Em.Application.initializer
+
+    name: "injectUser"
+
+    initialize: (container, App) ->
       container.typeInjection 'controller', 'user', 'user:main'
       container.typeInjection 'route', 'user', 'user:main'
