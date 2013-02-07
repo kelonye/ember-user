@@ -9,7 +9,7 @@ component install kelonye/ember-user
 Usage
 ---
 
-Assumes the user model is `App.User`
+Assumes the user model is `MyAppNamespace.User`
 
 ```
 require('ember-user')('/get_current_user_id_url');
