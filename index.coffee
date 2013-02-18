@@ -3,7 +3,7 @@ set = Em.set
 
 module.exports = (url)->
 
-  url ?= '/users/me'
+  url ?= '/users/me/'
 
   Em.Application.initializer
 

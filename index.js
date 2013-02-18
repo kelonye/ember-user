@@ -7,7 +7,7 @@ set = Em.set;
 
 module.exports = function(url) {
   if (url == null) {
-    url = '/users/me';
+    url = '/users/me/';
   }
   Em.Application.initializer({
     name: "user",
