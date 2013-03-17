@@ -7,9 +7,10 @@
     "kelonye/ember": "*"
   },
   "development": {
-    "component/assert": "*"
+    "timoxley/assert": "*"
   },
   "scripts": [
-    "index.js"
+    "index.js",
+    "lib/index.js"
   ]
 }
