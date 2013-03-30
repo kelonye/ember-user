@@ -28,9 +28,6 @@ lib/%.js: src/%.coffee
 test/lib/%.js: test/src/%.coffee
 	coffee -bcj $@ $<
 
-%.js: %.coffee
-	coffee -bcj $@ $<
-
 test/support/index.html: test/support/index.jade
 	jade < $< --path $< > $@
 

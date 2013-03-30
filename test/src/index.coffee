@@ -1,6 +1,6 @@
-describe 'User', ->
+describe 'UserController', ->
 
-  it 'user peoperty injected to routes and controllers', (done)->
+  it 'should be injected to routes and controllers', (done)->
 
     Em.$.ajax = ->
 
