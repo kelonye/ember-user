@@ -19,10 +19,11 @@ module.exports = (url)->
             url: url
             type: 'GET'
             contentType: 'application/json'
-            success: (key) ->
-              if key isnt ''
-                user = App.User.find key
-                set that, 'content', user
+            success: (res) ->
+              if res isnt ''
+                if typeof(res) is 'string'
+                  res = App.User.find res
+                set that, 'content', res
 
       container.register 'user', 'main', App.UserController
       container.lookup 'user:main'
