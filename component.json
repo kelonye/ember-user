@@ -1,5 +1,6 @@
 {
   "name": "ember-user",
+  "repo": "kelonye/ember-user",
   "version": "0.0.1",
   "license": "MIT",
   "description": "Inject controllers and routes with current user object",
