@@ -1,17 +1,11 @@
-get = Em.get
-set = Em.set
-
 module.exports = (url)->
 
   url ?= '/users/me/'
 
   Em.Application.initializer
-
     name: "user"
-
     initialize: (container, App) ->
-
-      App.UserController = Em.ObjectController.extend
+      ObjectController = Em.ObjectController.extend
         init: ->
           # sideload user
           that = @
@@ -20,20 +14,16 @@ module.exports = (url)->
             type: 'GET'
             contentType: 'application/json'
             success: (res) ->
-              if res isnt ''
-                if typeof(res) is 'string'
+              if res != ''
+                if typeof(res) == 'string'
                   res = App.User.find res
-                set that, 'content', res
-
-      container.register 'user', 'main', App.UserController
+                that.set 'content', res
+      container.register 'user', 'main', ObjectController
       container.lookup 'user:main'
 
 
   Em.Application.initializer
-
-    name: "injectUser"
-
+    name: 'injectUser'
     initialize: (container, App) ->
-
       container.typeInjection 'controller', 'user', 'user:main'
       container.typeInjection 'route', 'user', 'user:main'
