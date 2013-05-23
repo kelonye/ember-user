@@ -18,7 +18,8 @@ module.exports = (url)->
                 if typeof(res) == 'string'
                   res = App.User.find res
                 that.set 'content', res
-      container.register 'user', 'main', ObjectController
+      #container.register 'user', 'main', ObjectController
+      container.register 'user:main', ObjectController
       container.lookup 'user:main'
 
 
