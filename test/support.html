@@ -4,13 +4,12 @@
     <meta charset='utf-8'>
     <title>test</title>
     <link rel='stylesheet' href='../node_modules/mocha/mocha.css'>
-    <link rel='stylesheet' href='../public/public.css'>
   </head>
   <body>
     <div id='mocha'></div>
     <script src='../public/public.js'></script>
     <script type='text/javascript'>
-      require('kelonye-ember');
+      require('ember-user')();
       window.assert = require('timoxley-assert');
     </script>
     <script src='../node_modules/mocha/mocha.js'></script>

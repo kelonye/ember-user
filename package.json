@@ -5,6 +5,6 @@
   "description": "",
   "devDependencies": {
     "mocha": "*",
-    "component": "*"
+    "component-hooks": "*"
   }
 }
