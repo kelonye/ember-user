@@ -1,9 +1,10 @@
 {
   "name": "ember-user",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "Inject controllers and routes with current user object",
   "dependencies": {
-    "kelonye/ember": "*"
+    "kelonye/ember": "1.0.0-rc6"
   },
   "development": {
     "timoxley/assert": "*"
